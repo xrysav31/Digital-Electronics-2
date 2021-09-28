@@ -8,21 +8,21 @@ Link to your `Digital-electronics-2` GitHub repository:
 ### Blink example
 
 1. What is the meaning of the following binary operators in C?
-   * `|`
-   * `&`
-   * `^`
-   * `~`
-   * `<<`
-   * `>>`
+   * `|`    OR
+   * `&`    AND
+   * `^`    XOR
+   * `~`    NOT (one's complement)
+   * `<<`   left shift
+   * `>>`   right shift
 
 2. Complete truth table with operators: `|`, `&`, `^`, `~`
 
 | **b** | **a** |**b or a** | **b and a** | **b xor a** | **not b** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| 0 | 0 |  |  |  |  |
-| 0 | 1 |  |  |  |  |
-| 1 | 0 |  |  |  |  |
-| 1 | 1 |  |  |  |  |
+| 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
 
 
 ### Morse code
@@ -43,10 +43,21 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
         _delay_ms(SHORT_DELAY);
 
-        // WRITE YOUR CODE HERE
+        PORTB = PORTB ^ (1<<LED_GREEN);
+      	
+        _delay_ms(SHORT_DELAY);
+      
+        PORTB = PORTB & ~(1<<LED_GREEN);
+      
+        _delay_ms(SHORT_DELAY);
+      
+        PORTB = PORTB ^ (1<<LED_GREEN);
+      
+        _delay_ms(3*SHORT_DELAY);
+      
+     	PORTB = PORTB & ~(1<<LED_GREEN);
     }
 
     // Will never reach this
