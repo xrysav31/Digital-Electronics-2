@@ -30,6 +30,38 @@ Link to your `Digital-electronics-2` GitHub repository:
 1. Listing of C code with syntax highlighting which repeats one "dot" and one "comma" (BTW, in Morse code it is letter `A`) on a LED:
 
 ```c
+...
+#define LED_GREEN   PB5 // AVR pin where green LED is connected
+#define SHORT_DELAY 300 // Delay for short break
+#define LONG_DELAY 1500 // for long break (between letters)
+#define DOT 100         // dot 
+#define DASH 500       // dash 
+...
+
+int dot(void)
+{
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(DOT);
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(SHORT_DELAY);
+    return 0;
+}
+
+int dash(void)
+{
+    PORTB = PORTB ^ (1<<LED_GREEN); //on
+    _delay_ms(DASH);
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(SHORT_DELAY);
+    return 0;
+}
+
+int break_l(void) //between letters
+{
+    _delay_ms(LONG_DELAY);
+    return 0;
+}
+
 int main(void)
 {
     // Set pin as output in Data Direction Register
@@ -43,25 +75,24 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        _delay_ms(SHORT_DELAY);
-
-        PORTB = PORTB ^ (1<<LED_GREEN);
-      	
-        _delay_ms(SHORT_DELAY);
-      
-        PORTB = PORTB & ~(1<<LED_GREEN);
-      
-        _delay_ms(SHORT_DELAY);
-      
-        PORTB = PORTB ^ (1<<LED_GREEN);
-      
-        _delay_ms(3*SHORT_DELAY);
-      
-     	PORTB = PORTB & ~(1<<LED_GREEN);
+        break_l();
+        dot();
+        dot();
+        dot();
+        break_l();
+        dash();
+        dash();
+        dash();
+        break_l();
+        dot();
+        dot();
+        dot();
+        break_l();
     }
 
     // Will never reach this
     return 0;
+}
 }
 ```
 
