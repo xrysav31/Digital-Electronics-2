@@ -11,7 +11,7 @@ Link to your `Digital-electronics-2` GitHub repository:
    * `|`    OR
    * `&`    AND
    * `^`    XOR
-   * `~`    NOT (one's complement)
+   * `~`    NOT 
    * `<<`   left shift
    * `>>`   right shift
 
