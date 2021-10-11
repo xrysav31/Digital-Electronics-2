@@ -55,7 +55,9 @@ int main(void)
         {
             // Pause several milliseconds
             _delay_ms(BLINK_DELAY);
+            
             GPIO_toggle(&PORTC, LED_RED);
+            
             GPIO_toggle(&PORTB, LED_GREEN);
             
         }        
