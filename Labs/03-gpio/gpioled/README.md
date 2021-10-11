@@ -51,7 +51,7 @@ int main(void)
             _delay_ms(BLINK_DELAY);
             GPIO_toggle(&PORTC, LED_RED);
             GPIO_toggle(&PORTB, LED_GREEN);
-            // WRITE YOUR CODE HERE
+            
         }        
     }
 
