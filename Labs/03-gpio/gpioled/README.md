@@ -32,17 +32,23 @@ int main(void)
 {
     // Green LED at port B
     GPIO_config_output(&DDRB, LED_GREEN);
+    
     GPIO_write_low(&PORTB, LED_GREEN);
 
     // Configure the second LED at port C
     GPIO_config_output(&DDRC, LED_RED);
+    
     GPIO_write_low(&PORTC, LED_RED);
 
     // Configure Push button at port D and enable internal pull-up resistor
     GPIO_config_input_pullup(&DDRD, BUTTON);
+    
     //GPIO_write_low(&PORTD, BUTTON);
+    
     GPIO_toggle(&PORTC, LED_RED);
+    
     // Infinite loop
+    
     while (1)
     {
         if (bit_is_clear(PIND, BUTTON))
