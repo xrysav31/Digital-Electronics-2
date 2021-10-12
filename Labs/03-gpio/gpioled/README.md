@@ -29,17 +29,20 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 ```c
     // Configure Push button at port D and enable internal pull-up resistor
+    
     GPIO_config_input_pullup(&DDRD, BT_PD7);
     
     // Infinite loop
     while (1)
     {
         // Pause several milliseconds
+        
         _delay_ms(BLINK_DELAY);
 
         if(!(GPIO_read(&PIND, BT_PD7)))
         {
             GPIO_toggle(&PORTB, LED_GREEN);
+            
             GPIO_toggle(&PORTC, LED_PC5);
         }
     }
