@@ -28,44 +28,21 @@ Link to your `Digital-electronics-2` GitHub repository:
 2. Part of the C code listing with syntax highlighting, which toggles LEDs only if push button is pressed. Otherwise, the value of the LEDs does not change. Use function from your GPIO library. Let the push button is connected to port D:
 
 ```c
-int main(void)
-{
-    // Green LED at port B
-    GPIO_config_output(&DDRB, LED_GREEN);
-    
-    GPIO_write_low(&PORTB, LED_GREEN);
-
-    // Configure the second LED at port C
-    GPIO_config_output(&DDRC, LED_RED);
-    
-    GPIO_write_low(&PORTC, LED_RED);
-
     // Configure Push button at port D and enable internal pull-up resistor
-    GPIO_config_input_pullup(&DDRD, BUTTON);
-    
-    //GPIO_write_low(&PORTD, BUTTON);
-    
-    GPIO_toggle(&PORTC, LED_RED);
+    GPIO_config_input_pullup(&DDRD, BT_PD7);
     
     // Infinite loop
-    
     while (1)
     {
-        if (bit_is_clear(PIND, BUTTON))
-        {
-            // Pause several milliseconds
-            _delay_ms(BLINK_DELAY);
-            
-            GPIO_toggle(&PORTC, LED_RED);
-            
-            GPIO_toggle(&PORTB, LED_GREEN);
-            
-        }        
-    }
+        // Pause several milliseconds
+        _delay_ms(BLINK_DELAY);
 
-    // Will never reach this
-    return 0;
-}
+        if(!(GPIO_read(&PIND, BT_PD7)))
+        {
+            GPIO_toggle(&PORTB, LED_GREEN);
+            GPIO_toggle(&PORTC, LED_PC5);
+        }
+    }
 ```
 
 
