@@ -1,6 +1,6 @@
 # Lab 4: Ondřej Ryšavý
 
-   [https://github.com/xrysav3/Digital-electronics-2](https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/04-interrupts/04interrupts)
+   [https://github.com/xrysav31/Digital-electronics-2](https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/04-interrupts/04interrupts)
 
 
 ### Overflow times
