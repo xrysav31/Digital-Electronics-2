@@ -38,7 +38,7 @@
 #define TIM0_overflow_1ms() TCCR0B &= ~(1<<CS12); TCCR0B |= (1<<CS11) | (1<<CS10);
 /** @brief Set overflow 4ms, prescaler 100 --> 256 */
 #define TIM0_overflow_4ms()    TCCR0B &= ~((1<<CS11) | (1<<CS10)); TCCR0B |= (1<<CS12);
-/** @brief Set overflow 16.3ms, prescaler // 101 --> 1024 */
+/** @brief Set overflow 16ms, prescaler // 101 --> 1024 */
 #define TIM0_overflow_16ms()    TCCR0B &= ~(1<<CS11); TCCR0B |= (1<<CS12) | (1<<CS10);
 /** @brief Enable overflow interrupt, 1 --> enable */
 #define TIM0_overflow_interrupt_enable()  TIMSK0 |= (1<<TOIE0);
