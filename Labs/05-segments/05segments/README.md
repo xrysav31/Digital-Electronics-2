@@ -10,6 +10,19 @@ Link to your `Digital-electronics-2` GitHub repository:
 1. In your words, describe the difference between Common Cathode and Common Anode 7-segment display.
    * CC SSD - The common pin is connected to typically VCC. The input to LEDs in SSD is in mode 'active low' (active when input pin is connected to GND).
    * CA SSD - The common pin is connected to GND. The input to LEDs in SSD is in mode 'active high' (active when input pin is connected to VCC).
+   * 
+   | **Digit** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **DP** |
+   | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+   | 1 | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+   | 2 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 1 |
+   | 3 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 |
+   | 4 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 |
+   | 5 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+   | 6 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+   | 7 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+   | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+   | 9 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 |
 
 2. Code listing with syntax highlighting of two interrupt service routines (`TIMER0_OVF_vect`, `TIMER0_OVF_vect`) from counter application with at least two digits, ie. values from 00 to 59:
 
