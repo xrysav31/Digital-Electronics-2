@@ -1,8 +1,8 @@
-# Lab 6: YOUR_FIRSTNAME FAMILYNAME
+# Lab 6: Ondřej Ryšavý
 
 Link to your `Digital-electronics-2` GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+[https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/06-lcd/lcd](https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/06-lcd/lcd)
 
 
 ### LCD display module
