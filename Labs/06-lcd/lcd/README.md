@@ -15,7 +15,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 `e` = 101 = 0x65 = 0b01100101  
 `2` = 50 = 0x32 = 0b00110010
     
-   ![diagram](images/diagram1.jpg)
+   ![diagram](https://github.com/xrysav31/Digital-Electronics-2/blob/main/Labs/06-lcd/lcd/diagr..jpg)
 
 
 ### Stopwatch
