@@ -1,8 +1,8 @@
-# Lab 7: YOUR_FIRSTNAME FAMILYNAME
+# Lab 7: Ondřej Ryšavý
 
 Link to this file in your GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+[https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/07-uart/uart](https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/07-uart/uart)
 
 
 ### Analog-to-Digital Conversion
