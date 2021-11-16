@@ -1,8 +1,8 @@
-# Lab 8: YOUR_FIRSTNAME LASTNAME
+# Lab 8: Ondřej Ryšavý
 
 Link to this file in your GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+[https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/08-i2c/08-i2c](https://github.com/xrysav31/Digital-Electronics-2/tree/main/Labs/08-i2c/08-i2c)
 
 ### Arduino Uno pinout
 
